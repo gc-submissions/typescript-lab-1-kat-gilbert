@@ -1,6 +1,6 @@
 import { calcAverageProductPrice, Product } from "./products";
 
-interface InventoryItem {
+export interface InventoryItem {
     product: Product,
     quantity: number
 }
@@ -26,7 +26,7 @@ let inventory: InventoryItem [] = [
     }
 ]
 
-function calcInventoryValue(array: InventoryItem[]):number {
+export function calcInventoryValue(array: InventoryItem[]):number {
     let totalValue = 0;
 
     for (let i = 0; i < array.length; i++) {

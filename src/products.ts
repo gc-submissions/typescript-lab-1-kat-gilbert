@@ -20,12 +20,16 @@ let products: Product[] = [
 ]
 
 export function calcAverageProductPrice(array: Product[]):number {
-    let total = 0;
+    let total:number = 0;
 
     for (let i = 0; i < array.length; i++) {
         total += array[i].price;
     }
+
+    if (total === 0) {
+        return total;
+    } 
+    
     return total / array.length;
 }
-
-console.log(calcAverageProductPrice(products));
+calcAverageProductPrice(products);
